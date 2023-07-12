@@ -1,0 +1,5 @@
+#!/bin/bash
+# This script displays the third line of the file 'iacta'
+head -n 3 iacta | tail -n 1
+
+
