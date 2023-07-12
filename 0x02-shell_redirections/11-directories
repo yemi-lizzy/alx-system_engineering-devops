@@ -1,0 +1,6 @@
+#!/bin/bash
+# This script counts the number of directories and sub-directories in the current directory
+
+count=$(find . -mindepth 1 -type d | wc -l)
+echo "$count"
+
