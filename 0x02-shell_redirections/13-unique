@@ -1,0 +1,21 @@
+#!/bin/bash
+# This script prints words that appear exactly once from a list of words
+
+# Read input from stdin
+IFS=$'\n' read -r -d '' -a words
+
+# Declare an associative array to store word counts
+declare -A wordCount
+
+# Count the occurrences of each word
+for word in "${words[@]}"; do
+  ((wordCount[$word]++))
+done
+
+# Print the unique words in sorted order
+for word in "${words[@]}"; do
+  if ((wordCount[$word] == 1)); then
+    echo "$word"
+  fi
+done | sort
+

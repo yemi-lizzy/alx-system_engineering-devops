@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Read the input text from standard input (Ctrl+D to end input)
+text=$(cat)
+
+# Extract the first letter of each line
+decoded=$(echo "$text" | sed 's/^\(.\).*/\1/')
+
+# Print the decoded message with a newline at the end
+echo -e "$decoded"
+

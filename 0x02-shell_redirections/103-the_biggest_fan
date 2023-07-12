@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Read the input log file in TSV format
+log_file="access.log"
+
+# Extract the hosts or IP addresses and count their occurrences
+hosts=$(cut -f 1 "$log_file" | sort | uniq -c | sort -nr | head -n 11)
+
+# Display the top 11 hosts or IP addresses
+echo "$hosts"
+

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Read input from command-line argument
+input="$1"
+
+# Reverse the input using rev
+output=$(echo "$input" | rev)
+
+# Print the reversed output
+echo "$output"
+

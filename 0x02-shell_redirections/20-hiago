@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Read input from command-line argument
+input="$1"
+
+# Remove 'c' and 'C' using tr
+output=$(echo "$input" | tr -d 'cC')
+
+# Print the modified output
+echo "$output"
+

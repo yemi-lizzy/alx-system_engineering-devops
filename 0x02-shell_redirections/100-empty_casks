@@ -1,0 +1,2 @@
+find . -type f -empty -printf "%P\n" && find . -type d -empty -printf "%P\n"
+
